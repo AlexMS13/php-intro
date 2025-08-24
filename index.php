@@ -1,43 +1,32 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
 <?php
-echo nl2br("<b>Задача 2</b>". PHP_EOL);
-echo nl2br("Текущий файл: " . basename(__FILE__) . PHP_EOL);
-
-echo nl2br("Текущая строка: " . __LINE__ . PHP_EOL);
+echo "Задача 2:". PHP_EOL;
+echo "Текущий файл: " . basename(__FILE__) . PHP_EOL;
+echo "Текущая строка: " . __LINE__ . PHP_EOL;
 
 $heredoc = <<<EOT
 Lorem ipsum dolor sit amet consectetur adipisicing elit.
 Nesciunt aspernatur esse optio quod eveniet eos impedit corporis voluptatem qui amet architecto illum,
 dolorem quis dolores harum, recusandae, modi error pariatur!
 EOT;
-
-echo nl2br($heredoc . PHP_EOL);
+echo 'Переменная heredoc: ' . $heredoc . PHP_EOL;
 
 $a='Рыба';
 $b='человек';
 
-echo nl2br($a . ' рыбою сыта, а ' . $b .  ' человеком'. PHP_EOL);
+echo 'Вывод информации переменными: ' . $a . ' рыбою сыта, а ' . $b .  ' человеком'. PHP_EOL;
 
 
 
 
 
-echo nl2br(PHP_EOL . "<b>Задача 3</b>". PHP_EOL);
+echo PHP_EOL . "Задача 3:". PHP_EOL;
 
 // $variable = 3.14;
 // $variable = 3;
 // $variable = 'one';
 // $variable = true;
-$variable = null;
-// $variable = [];
+// $variable = null;
+$variable = [];
 
 if (is_bool($variable)) {
     $type = 'bool';
@@ -53,11 +42,11 @@ if (is_bool($variable)) {
     $type = 'other';
 }
 
-echo nl2br("type is $type" . PHP_EOL);
+echo "type is $type" . PHP_EOL;
 
  
 
-switch ($variable) {
+switch (true) {
     case is_bool($variable):
         $type = 'bool';
         break;
@@ -78,15 +67,8 @@ switch ($variable) {
         break;
 }
 
-echo nl2br("type is $type" . PHP_EOL);
+echo "type is $type" . PHP_EOL;
 
 
 
 ?>
-
-
-</body>
-</html>
-
-
-
